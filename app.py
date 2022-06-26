@@ -8,7 +8,7 @@ import shutil
 import os
 from OCR_proc import do_ocr
 import easyocr
-reader = easyocr.Reader(['en'])
+reader = easyocr.Reader(['en'],gpu = False, model_storage_directory = "Models/.")
 
 logging.basicConfig(
     level=logging.INFO, format="[%(asctime)s] %(levelname)s: %(message)s"
